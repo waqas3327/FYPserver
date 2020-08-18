@@ -12,7 +12,8 @@ userController.registerUser = async(req, res) => {
         console.log('req.body', body);
         const email = body.email;
         const password = body.password;
-
+        body.rating = 0;
+        body.count = 0;
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(password, salt);
 
@@ -104,6 +105,8 @@ userController.updateUser = async(req, res) => {
         //console.log('here is id,',req.params._id);
         let updates = req.body;
         delete updates['email'];
+        delete updates['rating'];
+        delete updates['count'];
         console.log('here is body,', req.body);
         runUpdate(email, updates, res);
 

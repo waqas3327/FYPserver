@@ -12,7 +12,9 @@ const Client = new Schema({
         type: String,
         unique: true
     },
-    password: String
+    password: String,
+    rating: Number,
+    count: Number
 });
 
 Client.plugin(mongoosePaginate);
