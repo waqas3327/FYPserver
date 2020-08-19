@@ -13,6 +13,7 @@ router.post("/sendmail", UserController.SendMail);
 router.get("/getsingleuser/:email", UserController.getSingleUser);
 // router.post("/",UserController.addUser);
 router.put("/updateuser/:email", UserController.updateUser);
+router.put("/updaterating/:email", UserController.updateRating);
 //router.delete("/:_id", UserController.deleteUser);
 
 module.exports = router;
