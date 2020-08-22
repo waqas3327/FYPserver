@@ -6,7 +6,6 @@ channelsController.SaveChannel = async(req, res) => {
     try {
         const body = req.body;
         console.log('req.body', body);
-        const name = body.name;
         const result = await ChatChannels.findOne({ "name": name });
         if (!result) // this means result is null
         {
