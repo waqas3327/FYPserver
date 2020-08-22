@@ -5,6 +5,7 @@ const ChatChannels = require('../models/chatChannels');
 channelsController.SaveChannel = async(req, res) => {
     try {
         const body = req.body;
+        const name = body.name;
         console.log('req.body', body);
         const result = await ChatChannels.findOne({ "name": name });
         if (!result) // this means result is null
@@ -21,7 +22,6 @@ channelsController.SaveChannel = async(req, res) => {
         console.log('ex', ex)
     }
 };
-
 channelsController.getAllChannels = async(req, res) => {
     // const lostproducts = await LostProduct.find();
     // console.log('all lost products', lostproducts);
@@ -34,6 +34,5 @@ channelsController.getAllChannels = async(req, res) => {
             }
         })
 }
-
 module.exports = channelsController;
 module.exports = channelsController;
