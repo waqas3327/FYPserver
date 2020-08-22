@@ -22,6 +22,7 @@ app.use(bodyParser.json()); // to support JSON-encoded bodies
 // Requiring Routes
 
 const UserRoutes = require('./routes/user.routes');
+const chatRoutes = require('./routes/channels.routes')
 const lostproductRoutes = require('./routes/lostproduct.routes');
 const lostpersonRoutes = require('./routes/lostperson.routes');
 const foundproductRoutes = require('./routes/foundproduct.routes');
@@ -59,6 +60,7 @@ app.use(cors());
 
 // Routes which should handle requests
 app.use("/user", UserRoutes);
+app.use("/chat", chatRoutes);
 app.use("/product", lostproductRoutes);
 app.use("/person", lostpersonRoutes);
 app.use("/foundproduct", foundproductRoutes);
