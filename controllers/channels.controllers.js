@@ -28,7 +28,7 @@ channelsController.getAllChannels = async(req, res) => {
     ChatChannels.find({})
         .exec(function(err, ChatChannels) {
             if (err) {
-                console.log('Error while retrieving ');
+                console.log('Cannot retrieve cchannels ');
             } else {
                 res.json(ChatChannels);
             }
