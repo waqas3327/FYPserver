@@ -33,8 +33,8 @@ const foundpersonRoutes = require('./routes/foundperson.routes');
 const mongoCon = process.env.mongoCon;
 
 mongoose.connect(mongoCon, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
-//mongodb+srv://waqas3327:03105593105@cluster0-kv7vt.mongodb.net/test?retryWrites=true&w=majority
 //mongoCon = mongodb://localhost:27017/fyp2
+//mongoCon = mongodb + srv: //waqas3327:03105593105@cluster0-kv7vt.mongodb.net/test?retryWrites=true&w=majority
 
 
 //const fs = require('fs');
